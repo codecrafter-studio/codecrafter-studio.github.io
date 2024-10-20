@@ -81,6 +81,7 @@ container-window {
     border-radius: 10px;
     position: absolute;
     box-shadow: 0 18px 100px 0 rgba(0,0,0,0.20), 0 0 1.5px 0 rgba(0,0,0,0.275);
+    background-color: #fff;
     resize: both;
     overflow: auto;
     &::-webkit-resizer {
@@ -159,7 +160,7 @@ const font = document.createElement('link');
 font.setAttribute('rel', 'stylesheet');
 font.setAttribute('href', './font.css');
 document.head.appendChild(font);
-document.body.innerHTML = document.body.innerHTML.replace('_apple_;', '');
+document.body.innerHTML = document.body.innerHTML.replaceAll('_apple_;', '');
 
 customElements.define('container-window', ContainerWindow);
 customElements.define('widget-button', WidgetButton);
